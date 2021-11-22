@@ -19,29 +19,58 @@
  * code is based off his work.
  *
  * See more of Jake's work at http://codepen.io/jakealbaugh/
+ *
+ * This site borrows heavily from Samuel Reed's strml.net,
+ * we made minor changes and tried not to break things.
  */
 
 /**
- * By the way, you can edit this box. Try adding new CSS!
+*********************************************************************
+ * We will need pandoc to print our BIP39 wordlist with
+ * NFT backgrounds.
+ * 
+ * Install it for your system: https://pandoc.org/installing.html
  *
- * For example,
+ * Ensure your installation has tex installed and 
+ * that you can print PDFs.
  *
- * The property 'text-shadow' takes the parameters:
- * 'x', 'y', 'blur', 'color'.
+ * You may need to install missing packages:
  *
- * So if I wanted to mirror the values,
- * I could place a shadow 15px under it,
- * with a little blur for effect:
- */
-
-.value {
-  text-shadow: 0px 15px 1px white;
-}
-
-/**
- * Try it out! There's lots you can do.
- * Try playing with text sizes, shadows, animations, or just
- * break the page. I won't hold it against you.
- */
-
-
+ * If your installation complains about everypage.sty
+ * https://raw.githubusercontent.com/z-a-f/template-LaTeX/master/include/packages/everypage/everypage.sty
+ *
+ * Also install the background package
+ * https://www.ctan.org/pkg/background
+ *
+ ***********Create the following shell script md2pdf.sh***********
+ ** #!/bin/bash
+ **
+ **pandoc "$1" \
+ **    -f gfm \
+ **    --include-in-header header.tex \
+ **    -V linkcolor:blue \
+ **    -V geometry:a4paper \
+ **    -V geometry:margin=0.5cm \
+ **  --pdf-engine=xelatex \
+ **    -o "$2"
+ *
+ ***********Create the following header.tex***********
+ *
+ **\usepackage{background}
+ **\usepackage{xcolor}
+ **
+ **\backgroundsetup{
+ **scale=1,
+ **opacity=1,
+ **angle=0,
+ **pages=all,
+ **contents={%
+ ** \includegraphics[width=\paperwidth,height=\paperheight]{YOURNFT.jpg}
+ ** }%
+ **}
+ **
+ **\color{white}
+***********Make custom edits to seize.txt***********
+* The wordlist will remain readable on as few as four 8 1/2" x 11" pages
+* You can use a converter to edit the markdown table in native csv
+* if you want to rearrange the columns.
