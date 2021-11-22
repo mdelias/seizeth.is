@@ -1,13 +1,13 @@
 STRML.net
 =========
 
-[View Site](http://strml.net)
+[View Site](https://seizeth.is)
 
 Building
 --------
 
 ```bash
-git clone git@github.com:STRML/strml.net.git
+git clone git@github.com:mdelias/seizeth.is.git
 cd strml.net
 npm install
 npm run dev
