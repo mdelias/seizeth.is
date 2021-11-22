@@ -1,33 +1,26 @@
 
 /**
  * The text could use some tweaks.
+ *
+ * First, let's add a fun background.
+ *
+ * Try changing it later.
  */
 
-.md {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-}
+ #work-text {
+  background: url("https://i.imgur.com/zmgRWCj.png") repeat-y local;
+ }
 
-.md h1, .md h2, .md h3, .md h4, .md h5, .md h6 {
-  display: inline-block;
-  color: #ddd;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
-}
-
-.md li {
-  margin: 5px 0;
-}
-
-.md h1, .md h2, .md h3, .md h4, .md h5, .md h6, .md ul, .md p {
-  margin: 0px;
+ .md {
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 /**
  * That's better.
  *
- * If you want to contact me, use the PGP keys on the left.
+ * If you want to contact us via PGP 
  *
- * You know, if you're into that sort of thing.
+ * our key on the left.
  */
 
 #pgp-text {
