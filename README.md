@@ -1,4 +1,4 @@
-STRML.net
+seizeth.is
 =========
 
 [View Site](https://seizeth.is)
