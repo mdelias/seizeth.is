@@ -13,7 +13,7 @@ import getPrefix from './lib/getPrefix';
 
 // Vars that will help us get er done
 const isDev = window.location.hostname === 'localhost';
-const speed = isDev ? 0 : 16;
+const speed = isDev ? 0 : 256;
 let style, styleEl, workEl, pgpEl, skipAnimationEl, pauseEl;
 let animationSkipped = false, done = false, paused = false;
 let browserPrefix;
@@ -188,30 +188,5 @@ function createEventHandlers() {
 //
 function createWorkBox() {
   if (workEl.classList.contains('flipped')) return;
-  workEl.innerHTML = '<div class="text">' + replaceURLs(workText) + '</div>' +
-                     '<div class="md">' + replaceURLs(md(workText)) + '<div>';
-
-  workEl.classList.add('flipped');
-  workEl.scrollTop = 9999;
-
-  // flippy floppy
-  let flipping = 0;
-  require('mouse-wheel')(workEl, async function(dx, dy) {
-    if (flipping) return;
-    let flipped = workEl.classList.contains('flipped');
-    let half = (workEl.scrollHeight - workEl.clientHeight) / 2;
-    let pastHalf = flipped ? workEl.scrollTop < half : workEl.scrollTop > half;
-
-    // If we're past half, flip the el.
-    if (pastHalf) {
-      workEl.classList.toggle('flipped');
-      flipping = true;
-      await Promise.delay(500);
-      workEl.scrollTop = flipped ? 0 : 9999;
-      flipping = false;
-    }
-
-    // Scroll. If we've flipped, flip the scroll direction.
-    workEl.scrollTop += (dy * (flipped ? -1 : 1));
-  }, true);
+  workEl.innerHTML = '<div class="md">' + replaceURLs(md(workText)) + '<div>';
 }
