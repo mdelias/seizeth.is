@@ -33,7 +33,6 @@
  *
  * Ensure your installation has tex installed and 
  * that you can print PDFs.
-*/
  *
  * You may need to install missing packages:
  *
@@ -52,11 +51,9 @@
  **    -V linkcolor:blue \
  **    -V geometry:a4paper \
  **    -V geometry:margin=0.5cm \
- **  --pdf-engine=xelatex \
+ **    --pdf-engine=xelatex \
  **    -o "$2"
- *
- ***********Create the following header.tex***********
- *
+ ***********Create the following header.tex file***********
  **\usepackage{background}
  **\usepackage{xcolor}
  **
@@ -72,10 +69,13 @@
  **
  **\color{white}
 ***********Make custom edits to seize.txt***********
+* 
 * The wordlist will remain readable on as few as four 8 1/2" x 11" pages
 * You can use a converter to edit the markdown table in native csv
 * if you want to rearrange the columns.
+* 
 ***********Use and share the list***********
+* 
 * Check out SLP 215 & Max Flaxman on how to best use this list. 
 * 
 * stephanlivera.com/episode/215/
