@@ -1,11 +1,10 @@
 /**
  *
- * Hey. My name's Samuel Reed. I'm CTO of BitMEX.com and frequent
- * open source contributor.
+ * Greetings. This is seizeth.is. 
  *
- * I build interactive websites.
+ * An interactive BIP 39 mneumonic generator and NFT gallery. 
  *
- * How about some live coding?
+ * And it's a DAO. Let's build :)
  */
 
 /**
@@ -96,7 +95,7 @@ body {
 }
 
 /**
- * So, let's talk projects. That's why you're here, right?
+ * So, let's talk NFTs and DAOs. That's why you're here, right?
  * I can't imagine you'd come just to see the pretty colors.
  */
 
@@ -104,3 +103,10 @@ pre:not(#style-text) {
   -webkit-transform: rotateY(10deg);
   -webkit-transform-origin: left;
 }
+
+/**
+ * First, let's print seize.txt - our printable 
+ * markdown BIP39 wordlist with NFT backgrounds.
+ *
+ * You can print these out on paper too!
+ */
