@@ -2,7 +2,7 @@
  *
  * Greetings. This is seizeth.is. 
  *
- * An interactive BIP 39 mneumonic generator and NFT gallery. 
+ *  
  *
  * And it's a DAO. Let's build :)
  */
@@ -109,4 +109,10 @@ pre:not(#style-text) {
  * markdown BIP39 wordlist with NFT backgrounds.
  *
  * You can print these out on paper too!
+ *
+ * This takes about 5 minutes in the browser.
+ * You can always skip the animation by clicking
+ * 'SKIP ANIMATION' to the left, 
+ * you can also view the raw text at seizeth.is/seize.txt
+ *
  */
