@@ -1,14 +1,14 @@
-STRML.net
+seizeth.is
 =========
 
-[View Site](http://strml.net)
+[View Site](https://seizeth.is)
 
 Building
 --------
 
 ```bash
-git clone git@github.com:STRML/strml.net.git
-cd strml.net
+git clone git@github.com:mdelias/seizeth.is.git
+cd seizeth.is
 npm install
 npm run dev
 # Open localhost:4003/index-dev.html in your browser
