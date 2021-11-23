@@ -8,7 +8,7 @@ Building
 
 ```bash
 git clone git@github.com:mdelias/seizeth.is.git
-cd strml.net
+cd seizeth.is
 npm install
 npm run dev
 # Open localhost:4003/index-dev.html in your browser
